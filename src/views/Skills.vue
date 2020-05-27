@@ -1,0 +1,159 @@
+<template>
+  <div>
+    <b-jumbotron :id="'jumbotron-' + component" class = "my-jumbotron" v-for="component in components" :key="component">
+      <div class="text">
+        <p v-for="content in contents" :key="content.id" v-if="(content.component_number == component)">{{content.paragraph}}</p>
+      </div>
+      <div class = "image" :class="'jumbotron-' + component + '-animation'"></div>
+    </b-jumbotron>
+  </div>
+</template>
+<script>
+import axios from 'axios';
+
+export default {
+  data() {
+    return {
+      components: [],
+      contents: [],
+      i: 0
+    };
+  },
+  methods: {
+    getText() {
+      const path = 'http://localhost:5000/skills';
+      axios.get(path)
+      .then((res) => {
+        let components = res.data;
+        let component;
+        let duplicates = [];
+        for(component of components){
+          duplicates.push(component.component_number); 
+        }
+        this.contents = components;
+        this.components = duplicates.filter((v, i, a) => a.indexOf(v) === i);
+      })
+      .catch((error) => {
+        // eslint-disable-next-line
+        console.error(error);
+      });
+    },
+  },
+  created() {
+    this.getText();
+  },
+}
+</script>
+<style scoped>
+  #jumbotron-1{
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    margin: 15px;
+  }
+  #jumbotron-2{
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+    margin: 15px;
+  }
+  #jumbotron-3{
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+    margin: 15px;
+  }
+  #jumbotron-4{
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    margin: 15px;
+  }
+  .text{
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    text-align: justify;
+    width:80%;
+    left: 5%;
+    top: 10%;
+    z-index: 1;
+  }
+  .image{
+    background-position: center;
+    height:100%;
+    width:100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+  }
+  .jumbotron-1-animation:hover{
+    background-image: url('../assets/skills/jumbotron1/1.jpg');
+    animation-name: animation-1;
+    animation-duration: 30s;
+    animation-iteration-count: 3;
+    background-position: center;
+  }
+  .jumbotron-2-animation:hover{
+    background-image: url('../assets/skills/jumbotron2/1.jpg');
+    animation-name: animation-2;
+    animation-duration: 30s;
+    animation-iteration-count: 3;
+    background-position: center;
+  }
+  .jumbotron-3-animation:hover{
+    background-image: url('../assets/skills/jumbotron3/1.jpg');
+    animation-name: animation-3;
+    animation-duration: 30s;
+    animation-iteration-count: 3;
+    background-position: center;
+  }
+  /* .jumbotron-4-animation:hover{
+    background-image: url('../assets/skills/jumbotron4/1.jpg');
+    animation-name: animation-4;
+    animation-duration: 30s;
+    animation-iteration-count: 3;
+    background-position: center;
+  } */
+  @keyframes animation-1{
+    0% {background-image: url('../assets/skills/jumbotron1/1.jpg'); opacity: 1;}
+    10% {background-image: url('../assets/skills/jumbotron1/1.jpg'); opacity: 0.5;}
+    20% {background-image: url('../assets/skills/jumbotron1/2.jpg');opacity: 1;}
+    40% {background-image: url('../assets/skills/jumbotron1/2.jpg');opacity: 0.5;}
+    50% {background-image: url('../assets/skills/jumbotron1/3.jpg'); opacity:1;}
+    65% {background-image: url('../assets/skills/jumbotron1/3.jpg'); opacity:0.5;}
+    75% {background-image: url('../assets/skills/jumbotron1/4.jpg'); opacity:1;}
+    90% {background-image: url('../assets/skills/jumbotron1/4.jpg'); opacity:0.5;}
+  }
+  @keyframes animation-2{
+    0% {background-image: url('../assets/skills/jumbotron2/1.jpg'); opacity: 1;}
+    10% {background-image: url('../assets/skills/jumbotron2/1.jpg'); opacity: 0.5;}
+    20% {background-image: url('../assets/skills/jumbotron2/2.jpg');opacity: 1;}
+    40% {background-image: url('../assets/skills/jumbotron2/2.jpg');opacity: 0.5;}
+    50% {background-image: url('../assets/skills/jumbotron2/3.jpg'); opacity:1;}
+    65% {background-image: url('../assets/skills/jumbotron2/3.jpg'); opacity:0.5;}
+    75% {background-image: url('../assets/skills/jumbotron2/4.jpg'); opacity:1;}
+    90% {background-image: url('../assets/skills/jumbotron2/4.jpg'); opacity:0.5;}
+  }
+  @keyframes animation-3{
+    0% {background-image: url('../assets/skills/jumbotron3/1.jpg'); opacity: 1;}
+    10% {background-image: url('../assets/skills/jumbotron3/1.jpg'); opacity: 0.5;}
+    20% {background-image: url('../assets/skills/jumbotron3/2.jpg');opacity: 1;}
+    40% {background-image: url('../assets/skills/jumbotron3/2.jpg');opacity: 0.5;}
+    50% {background-image: url('../assets/skills/jumbotron3/3.jpg'); opacity:1;}
+    65% {background-image: url('../assets/skills/jumbotron3/3.jpg'); opacity:0.5;}
+    75% {background-image: url('../assets/skills/jumbotron3/4.jpg'); opacity:1;}
+    90% {background-image: url('../assets/skills/jumbotron3/4.jpg'); opacity:0.5;}
+  }
+  /* @keyframes animation-4{
+    0% {background-image: url('../assets/skills/jumbotron4/1.jpg'); opacity: 1;}
+    10% {background-image: url('../assets/skills/jumbotron4/1.jpg'); opacity: 0.5;}
+    20% {background-image: url('../assets/skills/jumbotron4/2.jpg');opacity: 1;}
+    40% {background-image: url('../assets/skills/jumbotron4/2.jpg');opacity: 0.5;}
+    50% {background-image: url('../assets/skills/jumbotron4/3.jpg'); opacity:1;}
+    65% {background-image: url('../assets/skills/jumbotron4/3.jpg'); opacity:0.5;}
+    75% {background-image: url('../assets/skills/jumbotron4/4.jpg'); opacity:1;}
+    90% {background-image: url('../assets/skills/jumbotron4/4.jpg'); opacity:0.5;}
+  } */
+</style>

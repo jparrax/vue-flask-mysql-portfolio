@@ -1,12 +1,20 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <Header/>
     <router-view/>
+    <Footer/>
   </div>
 </template>
+<script>
+import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
+export default {
+  components:{
+    Header,
+    Footer
+  }
+}
+</script>
 
 <style>
 #app {
@@ -17,7 +25,19 @@
   color: #2c3e50;
 }
 
-#nav {
+body{
+  background-image: url('./assets/general/background/1.jpg');
+}
+
+.my-navbar{
+  background-color: black;
+}
+
+.my-jumbotron{
+  background-image: url('./assets/general/jumbotron/1.png');
+}
+
+/* #nav {
   padding: 30px;
 }
 
@@ -28,5 +48,5 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
-}
+} */
 </style>
