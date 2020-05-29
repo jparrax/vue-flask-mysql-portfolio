@@ -94,6 +94,7 @@ export default {
     animation-duration: 30s;
     animation-iteration-count: 3;
     background-position: center;
+    opacity: 0.5;
   }
   .jumbotron-2-animation:hover{
     background-image: url('../assets/experience/jumbotron2/1.jpg');
@@ -101,6 +102,7 @@ export default {
     animation-duration: 30s;
     animation-iteration-count: 3;
     background-position: center;
+    opacity: 0.5;
   }
   .jumbotron-3-animation:hover{
     background-image: url('../assets/experience/jumbotron3/1.jpg');
@@ -108,6 +110,7 @@ export default {
     animation-duration: 30s;
     animation-iteration-count: 3;
     background-position: center;
+    opacity: 0.5;
   }
   .jumbotron-4-animation:hover{
     background-image: url('../assets/experience/jumbotron4/1.jpg');
@@ -115,45 +118,48 @@ export default {
     animation-duration: 30s;
     animation-iteration-count: 3;
     background-position: center;
+    opacity: 0.5;
   }
   @keyframes animation-1{
-    0% {background-image: url('../assets/experience/jumbotron1/1.jpg'); opacity: 1;}
-    10% {background-image: url('../assets/experience/jumbotron1/1.jpg'); opacity: 0.5;}
-    20% {background-image: url('../assets/experience/jumbotron1/2.jpg');opacity: 1;}
-    40% {background-image: url('../assets/experience/jumbotron1/2.jpg');opacity: 0.5;}
-    50% {background-image: url('../assets/experience/jumbotron1/3.jpg'); opacity:1;}
-    65% {background-image: url('../assets/experience/jumbotron1/3.jpg'); opacity:0.5;}
-    75% {background-image: url('../assets/experience/jumbotron1/4.jpg'); opacity:1;}
-    90% {background-image: url('../assets/experience/jumbotron1/4.jpg'); opacity:0.5;}
+    /* 0% {background-image: url('../assets/experience/jumbotron1/1.jpg'); opacity: 1;} */
+    0% {background-image: url('../assets/experience/jumbotron1/1.jpg'); opacity: 0.5;}
+    /* 20% {background-image: url('../assets/experience/jumbotron1/2.jpg');opacity: 1;} */
+    25% {background-image: url('../assets/experience/jumbotron1/2.jpg');opacity: 0.5;}
+    /* 50% {background-image: url('../assets/experience/jumbotron1/3.jpg'); opacity:1;} */
+    50% {background-image: url('../assets/experience/jumbotron1/3.jpg'); opacity:0.5;}
+    /* 75% {background-image: url('../assets/experience/jumbotron1/4.jpg'); opacity:1;} */
+    75% {background-image: url('../assets/experience/jumbotron1/4.jpg'); opacity:0.5;}
   }
   @keyframes animation-2{
-    0% {background-image: url('../assets/experience/jumbotron2/1.jpg'); opacity: 1;}
-    10% {background-image: url('../assets/experience/jumbotron2/1.jpg'); opacity: 0.5;}
-    20% {background-image: url('../assets/experience/jumbotron2/2.jpg');opacity: 1;}
-    40% {background-image: url('../assets/experience/jumbotron2/2.jpg');opacity: 0.5;}
-    50% {background-image: url('../assets/experience/jumbotron2/3.jpg'); opacity:1;}
-    65% {background-image: url('../assets/experience/jumbotron2/3.jpg'); opacity:0.5;}
-    75% {background-image: url('../assets/experience/jumbotron2/4.jpg'); opacity:1;}
-    90% {background-image: url('../assets/experience/jumbotron2/4.jpg'); opacity:0.5;}
+    /* 0% {background-image: url('../assets/experience/jumbotron1/1.jpg'); opacity: 1;} */
+    0% {background-image: url('../assets/experience/jumbotron2/1.jpg'); opacity: 0.5;}
+    /* 20% {background-image: url('../assets/experience/jumbotron1/2.jpg');opacity: 1;} */
+    25% {background-image: url('../assets/experience/jumbotron2/2.jpg');opacity: 0.5;}
+    /* 50% {background-image: url('../assets/experience/jumbotron1/3.jpg'); opacity:1;} */
+    50% {background-image: url('../assets/experience/jumbotron2/3.jpg'); opacity:0.5;}
+    /* 75% {background-image: url('../assets/experience/jumbotron1/4.jpg'); opacity:1;} */
+    75% {background-image: url('../assets/experience/jumbotron2/4.jpg'); opacity:0.5;}
+
   }
   @keyframes animation-3{
-    0% {background-image: url('../assets/experience/jumbotron3/1.jpg'); opacity: 1;}
-    10% {background-image: url('../assets/experience/jumbotron3/1.jpg'); opacity: 0.5;}
-    20% {background-image: url('../assets/experience/jumbotron3/2.jpg');opacity: 1;}
-    40% {background-image: url('../assets/experience/jumbotron3/2.jpg');opacity: 0.5;}
-    50% {background-image: url('../assets/experience/jumbotron3/3.jpg'); opacity:1;}
-    65% {background-image: url('../assets/experience/jumbotron3/3.jpg'); opacity:0.5;}
-    75% {background-image: url('../assets/experience/jumbotron3/4.jpg'); opacity:1;}
-    90% {background-image: url('../assets/experience/jumbotron3/4.jpg'); opacity:0.5;}
+    /* 0% {background-image: url('../assets/experience/jumbotron1/1.jpg'); opacity: 1;} */
+    0% {background-image: url('../assets/experience/jumbotron3/1.jpg'); opacity: 0.5;}
+    /* 20% {background-image: url('../assets/experience/jumbotron1/2.jpg');opacity: 1;} */
+    25% {background-image: url('../assets/experience/jumbotron3/2.jpg');opacity: 0.5;}
+    /* 50% {background-image: url('../assets/experience/jumbotron1/3.jpg'); opacity:1;} */
+    50% {background-image: url('../assets/experience/jumbotron3/3.jpg'); opacity:0.5;}
+    /* 75% {background-image: url('../assets/experience/jumbotron1/4.jpg'); opacity:1;} */
+    75% {background-image: url('../assets/experience/jumbotron3/4.jpg'); opacity:0.5;}
+
   }
   @keyframes animation-4{
-    0% {background-image: url('../assets/experience/jumbotron4/1.jpg'); opacity: 1;}
-    10% {background-image: url('../assets/experience/jumbotron4/1.jpg'); opacity: 0.5;}
-    20% {background-image: url('../assets/experience/jumbotron4/2.jpg');opacity: 1;}
-    40% {background-image: url('../assets/experience/jumbotron4/2.jpg');opacity: 0.5;}
-    50% {background-image: url('../assets/experience/jumbotron4/3.jpg'); opacity:1;}
-    65% {background-image: url('../assets/experience/jumbotron4/3.jpg'); opacity:0.5;}
-    75% {background-image: url('../assets/experience/jumbotron4/4.jpg'); opacity:1;}
-    90% {background-image: url('../assets/experience/jumbotron4/4.jpg'); opacity:0.5;}
+    /* 0% {background-image: url('../assets/experience/jumbotron1/1.jpg'); opacity: 1;} */
+    0% {background-image: url('../assets/experience/jumbotron4/1.jpg'); opacity: 0.5;}
+    /* 20% {background-image: url('../assets/experience/jumbotron1/2.jpg');opacity: 1;} */
+    25% {background-image: url('../assets/experience/jumbotron4/2.jpg');opacity: 0.5;}
+    /* 50% {background-image: url('../assets/experience/jumbotron1/3.jpg'); opacity:1;} */
+    50% {background-image: url('../assets/experience/jumbotron4/3.jpg'); opacity:0.5;}
+    /* 75% {background-image: url('../assets/experience/jumbotron1/4.jpg'); opacity:1;} */
+    75% {background-image: url('../assets/experience/jumbotron4/4.jpg'); opacity:0.5;}
   }
 </style>
