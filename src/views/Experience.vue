@@ -1,9 +1,7 @@
 <template>
   <div>
     <b-jumbotron :id="'jumbotron-' + component" class = "my-jumbotron" v-for="component in components" :key="component">
-      <div class="text">
-        <p v-for="content in contents" :key="content.id" v-if="(content.component_number == component)">{{content.paragraph}}</p>
-      </div>
+      <p class="text" v-for="content in contents" :key="content.id" v-if="(content.component_number == component)">{{content.paragraph}}</p>
       <div class = "image" :class="'jumbotron-' + component + '-animation'"></div>
     </b-jumbotron>
   </div>
@@ -45,49 +43,6 @@ export default {
 }
 </script>
 <style scoped>
-  #jumbotron-1{
-    position: relative;
-    overflow: hidden;
-    height: 400px;
-    margin: 15px;
-  }
-  #jumbotron-2{
-    position: relative;
-    overflow: hidden;
-    height: 400px;
-    margin: 15px;
-  }
-  #jumbotron-3{
-    position: relative;
-    overflow: hidden;
-    height: 400px;
-    margin: 15px;
-  }
-  #jumbotron-4{
-    position: relative;
-    overflow: hidden;
-    height: 400px;
-    margin: 15px;
-  }
-  .text{
-    position: absolute;
-    color: white;
-    font-weight: bold;
-    text-align: justify;
-    width:80%;
-    left: 5%;
-    top: 10%;
-    z-index: 1;
-  }
-  .image{
-    background-position: center;
-    height:100%;
-    width:100%;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 0;
-  }
   .jumbotron-1-animation:hover{
     background-image: url('../assets/experience/jumbotron1/1.jpg');
     animation-name: animation-1;

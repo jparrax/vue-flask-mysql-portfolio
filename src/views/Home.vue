@@ -1,8 +1,8 @@
 <template>
   <div class="home">
     <b-row>
-      <b-col><img class="my-image" src="../assets/home/1.jpg" width="602px"></b-col>
-      <b-col>
+      <b-col class="image-wrapper" cols="*"><img class="my-image" src="../assets/home/1.jpg"></b-col>
+      <b-col class="text-wrapper" cols="*">
         <div class="my-text" v-for="component in components" :key="component">
           <h1 v-if="component == 1">
             {{contents[0].paragraph}}
@@ -56,11 +56,20 @@ import axios from 'axios';
   }
   .my-image{
     border-radius: 10px;
-    margin:10px;
+    margin:20px 0px 20px 0px;
     box-shadow: -3px 3px 5px black;
+    width: 93%;
   }
   .my-text{
+    width: 90%;
     margin-top:60px;
     margin-right: 15px;
+  }
+  .image-wrapper{
+    width: 602px;
+  }
+  .text-wrapper{
+    width: 602px;
+    margin-left: 6%;
   }
 </style>

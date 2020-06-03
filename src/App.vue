@@ -35,18 +35,42 @@ body{
 
 .my-jumbotron{
   background-image: url('./assets/general/jumbotron/1.png');
+  position: relative;
+  overflow: hidden;
+  height: auto;
 }
 
-/* #nav {
-  padding: 30px;
+#jumbotron-1{
+  margin: 15px;
 }
 
-#nav a {
+#jumbotron-2{
+  margin: 15px;
+}
+
+#jumbotron-3{
+  margin: 15px;
+}
+
+#jumbotron-4{
+  margin: 15px;
+}
+
+.text{
+  color: white;
   font-weight: bold;
-  color: #2c3e50;
+  text-align: justify;
+  position: relative;
+  z-index: 1;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-} */
+.image{
+  background-position: center;
+  height:100%;
+  width:100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
 </style>
