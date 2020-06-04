@@ -5,7 +5,7 @@
     </b-modal>
     <b-navbar class = "my-navbar" type="dark">
       <b-navbar-nav>
-        <b-nav-item class="my-name">Website made by Juan Fernando Parra, All rights reserved.</b-nav-item>
+        <b-nav-item class="my-name" style="font-size:100%">Website made by Juan Fernando Parra, All rights reserved.</b-nav-item>
       </b-navbar-nav>
       <b-navbar-nav class="ml-auto">
         <b-nav-item href="https://github.com/jparrax" target="_blank"><img src="../assets/footer/1.png" width="50px"></b-nav-item>

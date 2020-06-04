@@ -17,6 +17,9 @@ export default {
 </script>
 
 <style>
+html{
+  height: 100%;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -24,24 +27,27 @@ export default {
   text-align: center;
   color: #2c3e50;
   padding: 0px;
+  height:100%;
+  overflow-x: hidden;
 }
 
 #header{
   padding: 0px;
-  height: 10%;
+  position: sticky;
+  top: 0px;
+  z-index: 2;
 }
 
 #footer{
   padding: 0px;
-  height: 10%;
 }
 
 #view{
   padding: 0px;
-  height:80%
 }
 
 body{
+  height:100%;
   background-image: url('./assets/general/background/1.jpg');
 }
 

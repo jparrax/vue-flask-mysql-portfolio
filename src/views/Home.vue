@@ -1,7 +1,9 @@
 <template>
   <b-container fluid class="home">
-    <b-row class="ml-md-auto">
-      <b-col class="image-wrapper ml-auto mr-auto mt-auto mb-auto" cols="*"><img class="my-image" src="../assets/home/1.jpg"></b-col>
+    <b-row class="mr-auto ml-auto mt-auto mb-auto">
+      <b-col class="image-wrapper ml-auto mr-auto mt-auto mb-auto" cols="*">
+        <img class="my-image" src="../assets/home/1.jpg">
+      </b-col>
       <b-col class="text-wrapper ml-auto mr-auto mt-auto mb-auto" cols="*">
           <h1 class="my-text ml-auto mr-auto">
             {{contents[0].paragraph}}
@@ -20,7 +22,7 @@ import axios from 'axios';
     data() {
       return {
         components: [],
-        contents: []
+        contents: [],
       };
     },
     methods: {
@@ -49,9 +51,6 @@ import axios from 'axios';
   };
 </script>
 <style>
-  .home{
-    overflow: hidden;
-  }
   .my-image{
     border-radius: 10px;
     margin:20px 0px 20px 0px;
