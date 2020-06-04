@@ -25,7 +25,7 @@ import axios from 'axios';
     },
     methods: {
       getText() {
-        const path = 'http://localhost:5000/home';
+        const path = 'http://localhost:5000/Home';
         axios.get(path)
         .then((res) => {
           let components = res.data;

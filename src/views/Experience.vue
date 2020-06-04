@@ -19,7 +19,7 @@ export default {
   },
   methods: {
     getText() {
-      const path = 'http://localhost:5000/experience';
+      const path = 'http://localhost:5000/Experience';
       axios.get(path)
       .then((res) => {
         let components = res.data;

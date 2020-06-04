@@ -24,7 +24,7 @@
     },
     methods: {
       getHeader() {
-        const path = 'http://localhost:5000/header';
+        const path = 'http://localhost:5000/Header';
         axios.get(path)
         .then((res) => {
           let components = res.data;
