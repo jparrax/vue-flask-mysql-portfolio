@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <b-container fluid>
     <b-modal id="modal-1" title="I'd be happy to take your call" hide-footer>
       <p>Mobilephone: 0275553573</p>
     </b-modal>
@@ -13,5 +13,5 @@
         <b-nav-item v-b-modal.modal-1><img src="../assets/footer/3.png" width="50px"></b-nav-item>
       </b-navbar-nav>
     </b-navbar>
-  </div>
+  </b-container>
 </template>

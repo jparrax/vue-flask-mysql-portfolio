@@ -1,19 +1,17 @@
 <template>
-  <div class="home">
-    <b-row>
-      <b-col class="image-wrapper" cols="*"><img class="my-image" src="../assets/home/1.jpg"></b-col>
-      <b-col class="text-wrapper" cols="*">
-        <div class="my-text" v-for="component in components" :key="component">
-          <h1 v-if="component == 1">
+  <b-container fluid class="home">
+    <b-row class="ml-md-auto">
+      <b-col class="image-wrapper ml-auto mr-auto mt-auto mb-auto" cols="*"><img class="my-image" src="../assets/home/1.jpg"></b-col>
+      <b-col class="text-wrapper ml-auto mr-auto mt-auto mb-auto" cols="*">
+          <h1 class="my-text ml-auto mr-auto">
             {{contents[0].paragraph}}
           </h1>
-          <p v-if="component == 2"  align="justify">
+          <p class="my-text ml-auto mr-auto" align="justify">
             {{contents[1].paragraph}}
           </p>
-        </div>
       </b-col>
     </b-row>
-  </div>
+  </b-container>
 </template>
 <script>
 import axios from 'axios';
@@ -58,18 +56,15 @@ import axios from 'axios';
     border-radius: 10px;
     margin:20px 0px 20px 0px;
     box-shadow: -3px 3px 5px black;
-    width: 93%;
+    width: 100%;
   }
   .my-text{
     width: 90%;
-    margin-top:60px;
-    margin-right: 15px;
   }
   .image-wrapper{
-    width: 602px;
+    width: 550px;
   }
   .text-wrapper{
     width: 602px;
-    margin-left: 6%;
   }
 </style>

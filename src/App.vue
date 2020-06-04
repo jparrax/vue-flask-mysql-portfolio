@@ -1,9 +1,9 @@
 <template>
-  <div id="app">
-    <Header/>
-    <router-view/>
-    <Footer/>
-  </div>
+  <b-container fluid id="app">
+    <Header id="header"/>
+    <router-view id="view"/>
+    <Footer id="footer"/>
+  </b-container>
 </template>
 <script>
 import Header from '@/components/Header.vue'
@@ -23,6 +23,22 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  padding: 0px;
+}
+
+#header{
+  padding: 0px;
+  height: 10%;
+}
+
+#footer{
+  padding: 0px;
+  height: 10%;
+}
+
+#view{
+  padding: 0px;
+  height:80%
 }
 
 body{

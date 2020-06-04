@@ -1,18 +1,16 @@
 <template>
-  <div>
+  <b-container fluid>
     <b-navbar class = "my-navbar" type="dark" v-for="component in components" :key="component">
-      <b-navbar-nav class="ml-auto mr-auto" v-if="component == 1">
-        <b-nav-item v-for="content in contents" :key="content.id" :to="{path:content.route}">
-          <div class="my-name" v-if="content.component_number == components[0]">{{content.user_name}}</div>
+      <b-navbar-nav class="ml-auto mr-auto">
+        <b-nav-item class="my-name" v-for="content in contents" :key="content.id" :to="{path:content.route}" v-if="content.component_number == components[0] && component==1">
+          {{content.user_name}}
         </b-nav-item>
-      </b-navbar-nav>
-      <b-navbar-nav class="ml-auto mr-auto" v-if="component == 2">
-        <b-nav-item v-for="content in contents" :key="content.id" :to="{path:content.route}">
-          <div v-if="content.component_number == components[1]">{{content.page}}</div>
+        <b-nav-item v-for="content in contents" :key="content.id" :to="{path:content.route}" v-if="content.component_number == components[1] && component==2">
+          {{content.page}}
         </b-nav-item>
       </b-navbar-nav>
     </b-navbar>
-  </div>
+  </b-container>
 </template>
 <script>
   import axios from 'axios';

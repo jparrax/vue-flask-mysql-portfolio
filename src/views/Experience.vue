@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <b-container fluid>
     <b-jumbotron :id="'jumbotron-' + component" class = "my-jumbotron" v-for="component in components" :key="component">
       <p class="text" v-for="content in contents" :key="content.id" v-if="(content.component_number == component)">{{content.paragraph}}</p>
       <div class = "image" :class="'jumbotron-' + component + '-animation'"></div>
     </b-jumbotron>
-  </div>
+  </b-container>
 </template>
 <script>
 import axios from 'axios';
