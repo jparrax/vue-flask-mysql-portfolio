@@ -13,6 +13,16 @@
           </p>
       </b-col>
     </b-row>
+    <b-row>
+      <h1 class="my-text ml-auto mr-auto">
+        {{contents[2].paragraph}}
+      </h1>
+    </b-row>
+    <b-row>
+      <b-col sm="4" v-for="(video, index) in videos" :key="index">
+        <iframe width="400" height="315" :src="video.paragraph" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </b-col>
+    </b-row>
   </b-container>
 </template>
 <script>
@@ -23,6 +33,7 @@ import axios from 'axios';
       return {
         components: [],
         contents: [],
+        videos: []
       };
     },
     methods: {
@@ -44,9 +55,22 @@ import axios from 'axios';
           console.error(error);
         });
       },
+      getVideos() {
+        const path = 'http://localhost:5000/Video';
+        axios.get(path)
+        .then((res) => {
+          this.videos = res.data;
+          console.log(this.videos)
+        })
+        .catch((error) => {
+          // eslint-disable-next-line
+          console.error(error);
+        });
+      },
     },
     created() {
       this.getText();
+      this.getVideos()
     },
   };
 </script>

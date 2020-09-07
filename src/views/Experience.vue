@@ -44,7 +44,7 @@ export default {
 </script>
 <style scoped>
   .jumbotron-1-animation:hover{
-    background-image: url('../assets/experience/jumbotron1/1.jpg');
+    background-image: url('../assets/experience/jumbotron1/2.jpg');
     animation-name: animation-1;
     animation-duration: 30s;
     animation-iteration-count: 3;
@@ -52,15 +52,15 @@ export default {
     opacity: 0.5;
   }
   .jumbotron-2-animation:hover{
-    background-image: url('../assets/experience/jumbotron2/1.jpg');
-    animation-name: animation-2;
+    background-image: url('../assets/experience/jumbotron1/1.jpg');
+    animation-name: animation-1;
     animation-duration: 30s;
     animation-iteration-count: 3;
     background-position: center;
     opacity: 0.5;
   }
   .jumbotron-3-animation:hover{
-    background-image: url('../assets/experience/jumbotron3/1.jpg');
+    background-image: url('../assets/experience/jumbotron2/1.jpg');
     animation-name: animation-3;
     animation-duration: 30s;
     animation-iteration-count: 3;
@@ -68,14 +68,30 @@ export default {
     opacity: 0.5;
   }
   .jumbotron-4-animation:hover{
-    background-image: url('../assets/experience/jumbotron4/1.jpg');
+    background-image: url('../assets/experience/jumbotron3/1.jpg');
     animation-name: animation-4;
     animation-duration: 30s;
     animation-iteration-count: 3;
     background-position: center;
     opacity: 0.5;
   }
+  .jumbotron-5-animation:hover{
+    background-image: url('../assets/experience/jumbotron4/1.jpg');
+    animation-name: animation-5;
+    animation-duration: 30s;
+    animation-iteration-count: 3;
+    background-position: center;
+    opacity: 0.5;
+  }
   @keyframes animation-1{
+    /* 0% {background-image: url('../assets/experience/jumbotron1/2.jpg'); opacity: 1;} */
+    0% {background-image: url('../assets/experience/jumbotron1/2.jpg');opacity: 0.5;}
+    /* 50% {background-image: url('../assets/experience/jumbotron1/3.jpg'); opacity:1;} */
+    33% {background-image: url('../assets/experience/jumbotron1/3.jpg'); opacity:0.5;}
+    /* 75% {background-image: url('../assets/experience/jumbotron1/4.jpg'); opacity:1;} */
+    66% {background-image: url('../assets/experience/jumbotron1/4.jpg'); opacity:0.5;}
+  }
+  @keyframes animation-2{
     /* 0% {background-image: url('../assets/experience/jumbotron1/1.jpg'); opacity: 1;} */
     0% {background-image: url('../assets/experience/jumbotron1/1.jpg'); opacity: 0.5;}
     /* 20% {background-image: url('../assets/experience/jumbotron1/2.jpg');opacity: 1;} */
@@ -85,7 +101,7 @@ export default {
     /* 75% {background-image: url('../assets/experience/jumbotron1/4.jpg'); opacity:1;} */
     75% {background-image: url('../assets/experience/jumbotron1/4.jpg'); opacity:0.5;}
   }
-  @keyframes animation-2{
+  @keyframes animation-3{
     /* 0% {background-image: url('../assets/experience/jumbotron1/1.jpg'); opacity: 1;} */
     0% {background-image: url('../assets/experience/jumbotron2/1.jpg'); opacity: 0.5;}
     /* 20% {background-image: url('../assets/experience/jumbotron1/2.jpg');opacity: 1;} */
@@ -94,9 +110,8 @@ export default {
     50% {background-image: url('../assets/experience/jumbotron2/3.jpg'); opacity:0.5;}
     /* 75% {background-image: url('../assets/experience/jumbotron1/4.jpg'); opacity:1;} */
     75% {background-image: url('../assets/experience/jumbotron2/4.jpg'); opacity:0.5;}
-
   }
-  @keyframes animation-3{
+  @keyframes animation-4{
     /* 0% {background-image: url('../assets/experience/jumbotron1/1.jpg'); opacity: 1;} */
     0% {background-image: url('../assets/experience/jumbotron3/1.jpg'); opacity: 0.5;}
     /* 20% {background-image: url('../assets/experience/jumbotron1/2.jpg');opacity: 1;} */
@@ -105,9 +120,8 @@ export default {
     50% {background-image: url('../assets/experience/jumbotron3/3.jpg'); opacity:0.5;}
     /* 75% {background-image: url('../assets/experience/jumbotron1/4.jpg'); opacity:1;} */
     75% {background-image: url('../assets/experience/jumbotron3/4.jpg'); opacity:0.5;}
-
   }
-  @keyframes animation-4{
+  @keyframes animation-5{
     /* 0% {background-image: url('../assets/experience/jumbotron1/1.jpg'); opacity: 1;} */
     0% {background-image: url('../assets/experience/jumbotron4/1.jpg'); opacity: 0.5;}
     /* 20% {background-image: url('../assets/experience/jumbotron1/2.jpg');opacity: 1;} */

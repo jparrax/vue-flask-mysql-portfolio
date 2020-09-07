@@ -78,6 +78,10 @@ body{
   margin: 15px;
 }
 
+#jumbotron-5{
+  margin: 15px;
+}
+
 .text{
   color: white;
   font-weight: bold;
